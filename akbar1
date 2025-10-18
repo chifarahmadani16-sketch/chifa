@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Untuk Kamu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="lagu alamak.unknown" type="audio/mpeg">
+    Browser kamu tidak mendukung audio 😢
+  </audio>
+
+  <div class="container">
+    <img src="fairuz.jpg" alt="Foto Kita" class="foto">
+
+    <h1 class="fade-in">Hai muhamad fairuz akbar❤️</h1>
+    <p class="fade-in delay-1">Aku cuma mau bilang...</p>
+    <p class="message fade-in delay-2">Terima kasih udah selalu ada untukku.</p>
+    <p class="message fade-in delay-3">Aku sayang kamu, setiap hari, setiap waktu. 💖</p>
+    <p class="signature fade-in delay-4">- Dari seseorang yang baru belajar😘</p>
+
+    <button id="loveButton" class="fade-in delay-5">Klik kalau kamu sayang aku 😆</button>
+    <p id="responseText"></p>
+  </div>
+
+  <script>
+    document.getElementById("loveButton").addEventListener("click", function() {
+      const responses = [
+        "Awww aku juga sayang kamu! 🥰",
+        "Yeeey! Kita selamanya ya ❤️",
+        "Udah tau kok kamu sayang aku 😘",
+        "Love you more and more setiap detik 💞"
+      ];
+      const random = responses[Math.floor(Math.random() * responses.length)];
+      document.getElementById("responseText").textContent = random;
+    });
+  </script>
+</body>
+</html>
